@@ -1,3 +1,5 @@
+const constructNote = require('./construct-note');
+
 describe("constructNote", function() {
   it("should return false for empty letters string", function() {
     expect(constructNote("abcd", "")).toBe(false);
@@ -8,6 +10,7 @@ describe("constructNote", function() {
   });
 
   it("should account for duplicates", function() {
+    
     expect(constructNote("aa", "abcd")).toBe(false);
   });
 
